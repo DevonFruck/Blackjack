@@ -3,9 +3,10 @@
 
 class Card {
 
-  std::string suit;
-  std::string face;
-  int value;
+  private:
+    std::string suit;
+    std::string face;
+    int value;
 
   public:
     Card();
@@ -13,7 +14,7 @@ class Card {
     int getValue();
     std::string getFace();
     std::string getSuit();
-
+    void printCard();
 };
 
 #endif

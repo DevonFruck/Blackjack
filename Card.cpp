@@ -9,6 +9,10 @@
 
   Card::Card() {}
 
+  void Card::printCard() {
+    //return std::string (face) << " of " << std::string (suit);
+  }
+
   int Card::getValue() {
     return value;
   }

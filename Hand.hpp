@@ -2,22 +2,27 @@
 #define HAND_H
 
 #include "Card.hpp"
+#include <vector>
 
 class Hand {
 
-  private:
-    Card* card1;
-    Card* card2;
+   private:
+      double bet;
+      bool stillPlaying, softAce;
+      int totalValue;
+      std::vector<Card> playingHand;
 
-  public:
+      void checkHand();
+      void fillHand(Card* card1, Card* card2);
 
-    Hand();
-    void fillHand();
+   public:
+      Hand(double wager, Card* firCard, Card* secCard);
+      void hit(Card* newCard);
+      void stand();
+      bool isPlaying();
+      int getTotalValue();
 
-    Card* getCard1();
-    Card* getCard2();
-
-    ~Hand();
+      ~Hand();
 };
 
 #endif
