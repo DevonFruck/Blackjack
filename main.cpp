@@ -5,8 +5,6 @@
 #include <vector>
 
 int main() {
-  //Hand* dealer = new Hand();
-  //std::cout << dealer->getCard1()->getFace() << "\n" << dealer->getCard2()->getFace() << "\n";
 
   std::cout << "Welcome to the BlackJack table. \n";
 
