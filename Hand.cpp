@@ -24,16 +24,17 @@ void Hand::fillHand(Card* card1,Card* card2) {
 void Hand::hit(Card* newCard) {
    playingHand.push_back(newCard);
    checkHand();
-   std::cout << "\n" << totalValue << "\n";
+   std::cout << "\n" << (softAce ? "SOFT " : "") << totalValue << "\n";
 }
 
 void Hand::checkHand() {
    int newVal = 0;
    int numOfAces = 0;
    for (Card* x : playingHand) {
-      newVal += x->getValue();
+      int cardVal = x->getValue();
+      newVal += cardVal;
 
-      if (x->getValue() == 11) { // Found an Ace in hand
+      if (cardVal == 11) { // Found an Ace in hand
          numOfAces += 1;
       }
    }
@@ -44,6 +45,8 @@ void Hand::checkHand() {
    }
    if(numOfAces > 0) {
       softAce = true;
+   } else {
+      softAce = false;
    }
 
    totalValue = newVal;
