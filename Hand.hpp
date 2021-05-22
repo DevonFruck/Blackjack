@@ -10,7 +10,7 @@ class Hand {
       double bet;
       bool stillPlaying, softAce;
       int totalValue;
-      std::vector<Card> playingHand;
+      std::vector<Card*> playingHand;
 
       void checkHand();
       void fillHand(Card* card1, Card* card2);
@@ -21,6 +21,7 @@ class Hand {
       void stand();
       bool isPlaying();
       int getTotalValue();
+      int checkFirstCard();
 
       ~Hand();
 };
