@@ -3,18 +3,17 @@
 
 class Card {
 
-  private:
-    std::string suit;
-    std::string face;
-    int value;
+  	private:
+    	std::string suit;
+   	std::string face;
+    	int value;
 
-  public:
-    Card();
-    Card(std::string newSuit, std::string newFace, int newValue);
-    int getValue();
-    std::string getFace();
-    std::string getSuit();
-    void printCard();
+  	public:
+    	Card();
+    	Card(std::string newSuit, std::string newFace, int newValue);
+    	int getValue();
+    	std::string getFace();
+    	std::string getSuit();
+   	void printCard();
 };
-
 #endif

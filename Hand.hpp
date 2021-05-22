@@ -25,5 +25,4 @@ class Hand {
 
       ~Hand();
 };
-
 #endif
